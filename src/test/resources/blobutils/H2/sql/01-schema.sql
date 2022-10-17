@@ -1,0 +1,1 @@
+CREATE SCHEMA IF NOT EXISTS everythingeverywhereallatonce_schema AUTHORIZATION everythingeverywhereallatonce_username;

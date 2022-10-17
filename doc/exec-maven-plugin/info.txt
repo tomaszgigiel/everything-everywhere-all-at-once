@@ -1,0 +1,28 @@
+.
+
+<plugin>
+	<groupId>org.codehaus.mojo</groupId>
+	<artifactId>exec-maven-plugin</artifactId>
+	<version>3.1.0</version>
+	<configuration>
+		<mainClass>pl.tomaszgigiel.everythingeverywhereallatonce.SimpleApp</mainClass>
+		<arguments>
+			<argument>First</argument>
+			<argument>Second</argument>
+		</arguments>
+	</configuration>
+</plugin>
+
+AND
+
+pushd %~dp0..\..\
+call mvn -f pom-exec.xml clean package exec:java
+pause
+popd
+
+OR
+
+pushd %~dp0..\..\
+call mvn clean package exec:java -Dexec.mainClass="pl.tomaszgigiel.everythingeverywhereallatonce.SimpleApp" -Dexec.args="First Second" -Dexec.cleanupDaemonThreads=false
+pause
+popd
