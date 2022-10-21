@@ -36,7 +36,7 @@ class LambdaExceptionWrappersTest {
                        integers.forEach(LambdaExceptionWrappers.handlingConsumerWrapper(i -> possibleIOException(i, performed), IOException.class));
                });
 
-               Assertions.assertEquals("intentionally 'throw new RuntimeException' when a == 11", exception.getMessage());
+               Assertions.assertEquals("java.lang.RuntimeException: intentionally 'throw new RuntimeException' when a == 11", exception.getMessage());
        }
 
        private void possibleIOException(Integer a, List<Integer> list) throws IOException {

@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>pl.tomaszgigiel</groupId>
 	<artifactId>everything-everywhere-all-at-once</artifactId>
-	<version>1001-SNAPSHOT</version>
+	<version>1002-SNAPSHOT</version>
 	<name>everything-everywhere-all-at-once</name>
 	<packaging>jar</packaging>
 
