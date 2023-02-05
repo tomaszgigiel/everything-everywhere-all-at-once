@@ -166,7 +166,7 @@
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-csv</artifactId>
-			<version>1.10.0</version>
+			<version>1.9.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.angus</groupId>
@@ -183,7 +183,7 @@
 		<dependency>
 			<groupId>org.junit.jupiter</groupId>
 			<artifactId>junit-jupiter</artifactId>
-			<version>5.9.2</version>
+			<version>5.9.1</version>
 			<scope>test</scope>
 		</dependency>
 
@@ -191,7 +191,7 @@
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-			<version>1.18.26</version>
+			<version>1.18.24</version>
 			<scope>provided</scope>
 		</dependency>
 

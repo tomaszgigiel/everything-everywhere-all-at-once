@@ -13,9 +13,9 @@ class FileUtilsTest {
        @Test
        void isFilesIdentical() {
                try {
-                       String a = Paths.get("src", "test", "resources", "filesutils", "sample-01", "a.txt").toString();
-                       String b = Paths.get("src", "test", "resources", "filesutils", "sample-01", "b.txt").toString();
-                       String c = Paths.get("src", "test", "resources", "filesutils", "sample-01", "c.txt").toString();
+                       String a = Paths.get("src", "test", "resources", "pl.tomaszgigiel.utils.FilesUtils", "sample-01", "a.txt").toString();
+                       String b = Paths.get("src", "test", "resources", "pl.tomaszgigiel.utils.FilesUtils", "sample-01", "b.txt").toString();
+                       String c = Paths.get("src", "test", "resources", "pl.tomaszgigiel.utils.FilesUtils", "sample-01", "c.txt").toString();
 
                        Assertions.assertTrue(FileUtils.isFilesIdentical());
                        Assertions.assertTrue(FileUtils.isFilesIdentical(a));
@@ -30,8 +30,8 @@ class FileUtilsTest {
        @Test
        void isFilesIdenticalNot() {
                try {
-                       String a = Paths.get("src", "test", "resources", "filesutils", "sample-01", "a.txt").toString();
-                       String x = Paths.get("src", "test", "resources", "filesutils", "sample-01", "x.txt").toString();
+                       String a = Paths.get("src", "test", "resources", "pl.tomaszgigiel.utils.FilesUtils", "sample-01", "a.txt").toString();
+                       String x = Paths.get("src", "test", "resources", "pl.tomaszgigiel.utils.FilesUtils", "sample-01", "x.txt").toString();
 
                        Assertions.assertFalse(FileUtils.isFilesIdentical(a, x));
                } catch (IOException e) {
@@ -42,9 +42,9 @@ class FileUtilsTest {
        @Test
        void isDirsIdentical() {
                try {
-                       String a = Paths.get("src", "test", "resources", "filesutils", "sample-02", "a").toString();
-                       String b = Paths.get("src", "test", "resources", "filesutils", "sample-02", "b").toString();
-                       String c = Paths.get("src", "test", "resources", "filesutils", "sample-02", "c").toString();
+                       String a = Paths.get("src", "test", "resources", "pl.tomaszgigiel.utils.FilesUtils", "sample-02", "a").toString();
+                       String b = Paths.get("src", "test", "resources", "pl.tomaszgigiel.utils.FilesUtils", "sample-02", "b").toString();
+                       String c = Paths.get("src", "test", "resources", "pl.tomaszgigiel.utils.FilesUtils", "sample-02", "c").toString();
 
                        Assertions.assertTrue(FileUtils.isDirsIdentical());
                        Assertions.assertTrue(FileUtils.isDirsIdentical(a));
@@ -59,9 +59,9 @@ class FileUtilsTest {
        @Test
        void isDirsIdenticalNot() {
                try {
-                       String a = Paths.get("src", "test", "resources", "filesutils", "sample-02", "a").toString();
-                       String x = Paths.get("src", "test", "resources", "filesutils", "sample-02", "x").toString();
-                       String y = Paths.get("src", "test", "resources", "filesutils", "sample-02", "y").toString();
+                       String a = Paths.get("src", "test", "resources", "pl.tomaszgigiel.utils.FilesUtils", "sample-02", "a").toString();
+                       String x = Paths.get("src", "test", "resources", "pl.tomaszgigiel.utils.FilesUtils", "sample-02", "x").toString();
+                       String y = Paths.get("src", "test", "resources", "pl.tomaszgigiel.utils.FilesUtils", "sample-02", "y").toString();
 
                        Assertions.assertFalse(FileUtils.isDirsIdentical(a, x));
                        Assertions.assertFalse(FileUtils.isDirsIdentical(a, y));
@@ -73,8 +73,8 @@ class FileUtilsTest {
        @Test
        void replaceAll() {
                try {
-                       Path before = Paths.get("src", "test", "resources", "filesutils", "sample-03", "before");
-                       Path expected = Paths.get("src", "test", "resources", "filesutils", "sample-03", "expected");
+                       Path before = Paths.get("src", "test", "resources", "pl.tomaszgigiel.utils.FilesUtils", "sample-03", "before");
+                       Path expected = Paths.get("src", "test", "resources", "pl.tomaszgigiel.utils.FilesUtils", "sample-03", "expected");
                        Path after = Paths.get("target", "test", "after");
                        //
                        String ABSOLUTE_PATH_REGEX = ".*to-change.*";

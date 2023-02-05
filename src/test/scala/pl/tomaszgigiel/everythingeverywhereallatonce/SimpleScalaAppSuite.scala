@@ -1,4 +1,4 @@
-package pl.tomaszgigiel.fibonacci
+package pl.tomaszgigiel.everythingeverywhereallatonce
 
 import org.scalatest.funsuite.AnyFunSuite
 

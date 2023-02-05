@@ -15,8 +15,8 @@ class ZipUtilsTest {
        @Test
        void zip() {
                try {
-                       String expectedZip = Paths.get("src", "test", "resources", "ziputils", "sample-01", "to-unzip", "example.zip").toString();
-                       String inputDir = Paths.get("src", "test", "resources", "ziputils", "sample-01", "to-zip", "example-folder").toString();
+                       String expectedZip = Paths.get("src", "test", "resources", "pl.tomaszgigiel.utils.ZipUtils", "sample-01", "to-unzip", "example.zip").toString();
+                       String inputDir = Paths.get("src", "test", "resources", "pl.tomaszgigiel.utils.ZipUtils", "sample-01", "to-zip", "example-folder").toString();
                        String destinationZip = Paths.get("target", "example-folder-test.zip").toString();
 
                        FileTime lastModifiedTime = FileTime.fromMillis(ZonedDateTime.of(2000, Month.JANUARY.getValue(), 1, 19, 30, 0, 0, ZoneId.of("Europe/Warsaw")).toInstant().toEpochMilli());
@@ -31,8 +31,8 @@ class ZipUtilsTest {
        @Test
        void unzip() {
                try {
-                       String expectedDir = Paths.get("src", "test", "resources", "ziputils", "sample-01", "to-zip").toString();
-                       String inputZip = Paths.get("src", "test", "resources", "ziputils", "sample-01", "to-unzip", "example.zip").toString();
+                       String expectedDir = Paths.get("src", "test", "resources", "pl.tomaszgigiel.utils.ZipUtils", "sample-01", "to-zip").toString();
+                       String inputZip = Paths.get("src", "test", "resources", "pl.tomaszgigiel.utils.ZipUtils", "sample-01", "to-unzip", "example.zip").toString();
                        String destinationDir = Paths.get("target", "example-folder-test").toString();
 
                        ZipUtils.unzip(inputZip, destinationDir);

@@ -20,7 +20,7 @@ class BlobUtilsTest {
 
 	private Connection connection() throws IOException, SQLException {
 		ClassLoader loader = Thread.currentThread().getContextClassLoader();
-		InputStream stream = loader.getResourceAsStream("blobutils/H2/mem.properties");
+		InputStream stream = loader.getResourceAsStream("pl.tomaszgigiel.utils.BlobUtils/H2/mem.properties");
 
 		Properties properties = new Properties();
 		properties.load(stream);

@@ -3,7 +3,7 @@ lazy val root = project
   .settings(
     name := "everything-everywhere-all-at-once",
     organization := "pl.tomaszgigiel",
-    version := "1000-SNAPSHOT",
+    version := "1003-SNAPSHOT",
     scalaVersion := "3.2.0",
     scalacOptions := Seq(
       "-indent",
@@ -36,7 +36,10 @@ lazy val root = project
       "edu.stanford.nlp" % "stanford-corenlp" % "4.5.1",
       "com.typesafe" % "config" % "1.4.2",
       "org.zeroturnaround" % "zt-zip" % "1.15",
-      "com.ibm.informix" % "jdbc" % "4.50.8"
+      "com.ibm.informix" % "jdbc" % "4.50.8",
+      "org.eclipse.angus" % "angus-mail" % "2.0.1",
+      "com.itextpdf" % "itextpdf" % "5.5.13.3",
+      "org.apache.commons" % "commons-csv" % "1.10.0"
     ),
     Compile / mainClass := Some("pl.tomaszgigiel.everythingeverywhereallatonce.SimpleScalaApp"),
     assembly / assemblyJarName := s"${name.value}-uberjar.jar",

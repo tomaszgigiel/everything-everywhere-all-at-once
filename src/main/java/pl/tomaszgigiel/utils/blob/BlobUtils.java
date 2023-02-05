@@ -27,15 +27,15 @@ public class BlobUtils {
 		return result;
 	}
 
-	public static void update(Connection connecton, String update, Item item) throws SQLException {
-		Blob blob = connecton.createBlob();
+	public static void update(Connection connection, String update, Item item) throws SQLException {
+		Blob blob = connection.createBlob();
 		try {
 			blob.setBytes(0, item.getContents()); // e.g. Informix
 		} catch (SQLException ex) {
 			blob.setBytes(1, item.getContents()); // e.g. H2
 		}
 
-		PreparedStatement pstmt = connecton.prepareStatement(update);
+		PreparedStatement pstmt = connection.prepareStatement(update);
 		pstmt.setString(1, item.getName());
 		pstmt.setBlob(2, blob);
 		pstmt.setString(3, item.getId());

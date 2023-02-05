@@ -15,7 +15,7 @@ public class LambdaExceptionWrappers {
                        } catch (Exception ex) {
                                try {
                                        E exCast = exceptionClass.cast(ex);
-                                       log.error("Exception occurred.", exCast);
+                                       log.error(ex.getLocalizedMessage(), exCast);
                                } catch (ClassCastException ccEx) {
                                        throw new RuntimeException(ex);
                                }
